@@ -1,0 +1,85 @@
+<%-- ─────────────────────────────────────────────────────────────────────────
+     INVITE MODAL  — drop this block anywhere before </body> in admin_account.ejs
+     Replace the old "modal-create-employee" modal entirely with this one.
+     
+     BUTTON THAT OPENS IT (already in your section-header):
+       onclick="openModal('modal-invite-employee')"
+     ───────────────────────────────────────────────────────────────────────── --%>
+
+<!-- Modal: Invite Employee via Email -->
+<div class="modal-overlay" id="modal-invite-employee" onclick="closeOnOverlay(event, 'modal-invite-employee')">
+    <div class="modal">
+        <div class="modal-header">
+            <h3>Send Account Invite</h3>
+            <button type="button" class="modal-close" onclick="closeModal('modal-invite-employee')">×</button>
+        </div>
+        <form action="/admin_account/employees/invite" method="POST">
+            <div class="modal-body">
+                <p class="modal-desc">
+                    Enter the recipient's email address and role. They will receive a secure one-time link
+                    to set up their own account — no password is created by admin.
+                </p>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input
+                        type="email"
+                        name="inviteEmail"
+                        placeholder="employee@msi.com"
+                        required
+                        autocomplete="off"
+                    >
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Role</label>
+                        <select name="inviteRole" required>
+                            <option value="">Select Role</option>
+                            <option value="employee">Employee</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Branch</label>
+                        <select name="inviteBranch" required>
+                            <option value="">Select Branch</option>
+                            <option value="Silang">Silang</option>
+                            <option value="Davao">Davao</option>
+                            <option value="Cebu">Cebu</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Department</label>
+                    <input
+                        type="text"
+                        name="inviteDept"
+                        placeholder="e.g. ENGINEERING"
+                        id="inviteDeptInput"
+                        required
+                    >
+                    <small>The invite link expires in 24 hours.</small>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-ghost" onclick="closeModal('modal-invite-employee')">Cancel</button>
+                <button type="submit" class="btn btn-primary">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                    Send Invite
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+/* Auto-uppercase the department field inside the invite modal */
+const inviteDeptInput = document.getElementById('inviteDeptInput');
+if (inviteDeptInput) {
+    inviteDeptInput.addEventListener('input', () => {
+        inviteDeptInput.value = inviteDeptInput.value.toUpperCase();
+    });
+}
+</script>

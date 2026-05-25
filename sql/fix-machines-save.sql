@@ -1,0 +1,56 @@
+CREATE TABLE IF NOT EXISTS machines (
+  id INT NOT NULL AUTO_INCREMENT,
+  clientId VARCHAR(100) NOT NULL,
+  clientName VARCHAR(255) DEFAULT '',
+  location VARCHAR(255) DEFAULT '',
+  unit VARCHAR(100) DEFAULT '',
+  model VARCHAR(100) DEFAULT '',
+  serialNo VARCHAR(100) DEFAULT '',
+  dateInstalled DATE NULL,
+  runningHours INT DEFAULT 0,
+  status VARCHAR(50) DEFAULT '',
+  description TEXT,
+  submittedBy VARCHAR(255) DEFAULT '',
+  technicians JSON NULL,
+  maintenanceServiceDate DATE NULL,
+  partServiceDates JSON NULL,
+  partServiceHours JSON NULL,
+  updates JSON NULL,
+  reports JSON NULL,
+  initialRunningHours INT DEFAULT 0,
+  initialStatus VARCHAR(50) DEFAULT '',
+  initialDescription TEXT,
+  initialMaintenanceServiceDate DATE NULL,
+  initialPartServiceDates JSON NULL,
+  initialPartServiceHours JSON NULL,
+  PRIMARY KEY (id),
+  INDEX idx_machines_clientId (clientId)
+);
+
+ALTER TABLE machines
+  ADD COLUMN IF NOT EXISTS clientName VARCHAR(255) DEFAULT '',
+  ADD COLUMN IF NOT EXISTS location VARCHAR(255) DEFAULT '',
+  ADD COLUMN IF NOT EXISTS technicians JSON NULL,
+  ADD COLUMN IF NOT EXISTS maintenanceServiceDate DATE NULL,
+  ADD COLUMN IF NOT EXISTS partServiceDates JSON NULL,
+  ADD COLUMN IF NOT EXISTS partServiceHours JSON NULL,
+  ADD COLUMN IF NOT EXISTS updates JSON NULL,
+  ADD COLUMN IF NOT EXISTS reports JSON NULL,
+  ADD COLUMN IF NOT EXISTS initialRunningHours INT DEFAULT 0,
+  ADD COLUMN IF NOT EXISTS initialStatus VARCHAR(50) DEFAULT '',
+  ADD COLUMN IF NOT EXISTS initialDescription TEXT,
+  ADD COLUMN IF NOT EXISTS initialMaintenanceServiceDate DATE NULL,
+  ADD COLUMN IF NOT EXISTS initialPartServiceDates JSON NULL,
+  ADD COLUMN IF NOT EXISTS initialPartServiceHours JSON NULL;
+
+CREATE TABLE IF NOT EXISTS machine_reports (
+  id INT NOT NULL AUTO_INCREMENT,
+  machine_id INT NOT NULL,
+  technicians TEXT,
+  problem TEXT,
+  action_taken TEXT,
+  recommendation TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  INDEX idx_machine_reports_machine_id (machine_id)
+);

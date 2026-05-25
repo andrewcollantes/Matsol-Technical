@@ -1,0 +1,218 @@
+{
+  "accounts": [
+    {
+      "username": "admin_account",
+      "passwordHash": "$2a$10$VmIUzDx21IaoiHoedyw4eO56jtOM4Tzkco1/9RqZ5Ix2SbOoqGrNi",
+      "role": "admin",
+      "fullName": "MSI System Administrator",
+      "department": "ADMIN",
+      "branch": "Silang",
+      "status": "active"
+    },
+    {
+      "username": "user_account",
+      "passwordHash": "$2a$10$i.4ePyGvZY2JTTRStKhVm.0OV/xqzH/qQDWT6FDFDyZMM/SjX/Cda",
+      "role": "user",
+      "fullName": "MSI Employee User",
+      "department": "OPERATIONS",
+      "branch": "Davao",
+      "status": "active"
+    }
+  ],
+  "clients": [
+    {
+      "id": "cdo",
+      "name": "CDO",
+      "location": "Patricia Murillo",
+      "status": "active"
+    },
+    {
+      "id": "bsp",
+      "name": "BSP",
+      "location": "Janine Avila",
+      "status": "active"
+    },
+    {
+      "id": "alaska",
+      "name": "Alaska",
+      "location": "Neil Ella",
+      "status": "active"
+    },
+    {
+      "id": "interphil",
+      "name": "Interphil",
+      "location": "ABI",
+      "status": "active"
+    },
+    {
+      "id": "del-monte",
+      "name": "Del Monte",
+      "location": "Caamba",
+      "status": "active"
+    },
+    {
+      "id": "lamoiyan",
+      "name": "Lamoiyan",
+      "location": "Bicutan",
+      "status": "active"
+    },
+    {
+      "id": "monde",
+      "name": "Monde",
+      "location": "Cainta",
+      "status": "active"
+    },
+    {
+      "id": "purefoods",
+      "name": "Purefoods",
+      "location": "Gen Trias",
+      "status": "active"
+    }
+  ],
+  "invites": [
+    {
+      "token": "6163fe4fdb608294c42349039a9c48caca1fb0c88c435085",
+      "email": "jamesbregania@gmail.com",
+      "role": "employee",
+      "branch": "Silang",
+      "department": "SD",
+      "status": "pending",
+      "createdAt": "2026-04-28T02:20:18.133Z",
+      "expiresAt": "2026-04-29T02:20:18.133Z",
+      "acceptedAt": null,
+      "acceptedUsername": null
+    },
+    {
+      "token": "de93c6fb670ef07f13457c3a66adb3bda091a69e8a62b690",
+      "email": "jamesbregania@gmail.com",
+      "role": "employee",
+      "branch": "Cebu",
+      "department": "IT",
+      "status": "pending",
+      "createdAt": "2026-05-12T03:12:12.322Z",
+      "expiresAt": "2026-05-13T03:12:12.322Z",
+      "acceptedAt": null,
+      "acceptedUsername": null
+    },
+    {
+      "token": "379d38ddd1d8079861c76b6e732e0b3bcfb7e906a2e4889b",
+      "email": "jamesbregania@gmail.com",
+      "role": "employee",
+      "branch": "Cebu",
+      "department": "E",
+      "status": "pending",
+      "createdAt": "2026-05-12T05:36:03.252Z",
+      "expiresAt": "2026-05-13T05:36:03.252Z",
+      "acceptedAt": null,
+      "acceptedUsername": null
+    },
+    {
+      "token": "6030f4e259658b7a8f25da10bf7a59b7502db212f195beb7",
+      "email": "jamesbregania@gmail.com",
+      "role": "employee",
+      "branch": "Cebu",
+      "department": "E",
+      "status": "pending",
+      "createdAt": "2026-05-12T05:42:35.844Z",
+      "expiresAt": "2026-05-13T05:42:35.844Z",
+      "acceptedAt": null,
+      "acceptedUsername": null
+    },
+    {
+      "token": "d659707d1b3de3c7fcb9dae23f034e67282c07c2394eb890",
+      "email": "jamesbregania@gmail.com",
+      "role": "employee",
+      "branch": "Cebu",
+      "department": "E",
+      "status": "pending",
+      "createdAt": "2026-05-12T05:54:40.251Z",
+      "expiresAt": "2026-05-13T05:54:40.251Z",
+      "acceptedAt": null,
+      "acceptedUsername": null
+    },
+    {
+      "token": "4f5e8b98338af303bca4b4cb81486610feca3132f9f54438",
+      "email": "jamesbregania@gmail.com",
+      "role": "employee",
+      "branch": "Cebu",
+      "department": "E",
+      "status": "pending",
+      "createdAt": "2026-05-12T05:56:32.851Z",
+      "expiresAt": "2026-05-13T05:56:32.851Z",
+      "acceptedAt": null,
+      "acceptedUsername": null
+    },
+    {
+      "token": "521113e51ef84329cd402e8dc5278680ebb3950f215a86f3",
+      "email": "andrewcollantes19@gmail.com",
+      "role": "employee",
+      "branch": "Silang",
+      "department": "TECHNICAL",
+      "status": "pending",
+      "createdAt": "2026-05-18T01:55:57.494Z",
+      "expiresAt": "2026-05-19T01:55:57.494Z",
+      "acceptedAt": null,
+      "acceptedUsername": null
+    },
+    {
+      "token": "17efbb3e71b0b0ca706f464248bdceb8cb7eda3c493eba8a",
+      "email": "andrewcollantes19@gmail.com",
+      "role": "employee",
+      "branch": "Silang",
+      "department": "TECHNICAL",
+      "status": "pending",
+      "createdAt": "2026-05-18T02:06:48.479Z",
+      "expiresAt": "2026-05-19T02:06:48.479Z",
+      "acceptedAt": null,
+      "acceptedUsername": null
+    },
+    {
+      "token": "8423f1337a00cc37a0bfff474e3ddc2ee825e0a1763af39b",
+      "email": "nightdrew19@gmail.com",
+      "role": "employee",
+      "branch": "Silang",
+      "department": "TECHNICAL",
+      "status": "pending",
+      "createdAt": "2026-05-18T02:14:07.681Z",
+      "expiresAt": "2026-05-19T02:14:07.681Z",
+      "acceptedAt": null,
+      "acceptedUsername": null
+    },
+    {
+      "token": "17ce9601c05d619548ae3d29cddcbb2dfc5a66b586cccac3",
+      "email": "nightdrew220@gmail.com",
+      "role": "employee",
+      "branch": "Davao",
+      "department": "TECHNICAL",
+      "status": "pending",
+      "createdAt": "2026-05-18T02:48:47.213Z",
+      "expiresAt": "2026-05-19T02:48:47.213Z",
+      "acceptedAt": null,
+      "acceptedUsername": null
+    },
+    {
+      "token": "df48f75a8408bbd39e785cbd54735da942a36973d31bf994",
+      "email": "xsara8839@gmail.com",
+      "role": "employee",
+      "branch": "Silang",
+      "department": "IT",
+      "status": "pending",
+      "createdAt": "2026-05-19T00:42:07.522Z",
+      "expiresAt": "2026-05-20T00:42:07.522Z",
+      "acceptedAt": null,
+      "acceptedUsername": null
+    }
+  ],
+  "passwordResets": [
+    {
+      "token": "abc123def456",
+      "username": "user_01",
+      "email": "sample@msi.com",
+      "status": "pending",
+      "createdAt": "2026-04-28T02:19:07.126Z",
+      "expiresAt": "2026-04-28T03:19:07.127Z",
+      "usedAt": null
+    }
+  ],
+  "machines": []
+}
